@@ -1,11 +1,13 @@
 import time
+
 import allure
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 from Sprint_4.pages.order_page import OrderPage
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 @allure.description('Тест для браузера хром ')
 def test_order_input():
@@ -33,7 +35,4 @@ def test_order_input():
     assert "Номер заказа:" in element.text
     assert "Запишите его" in element.text
 
-
-
     driver.quit()
-

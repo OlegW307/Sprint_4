@@ -3,18 +3,15 @@ import time
 import allure
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-from Sprint_4.pages.order_page import OrderPage
+from order_page import OrderPage
 
 
-@allure.description('Тест для браузера FireFox ')
+@allure.description('Тест для браузера хром ')
 def test_order_input():
-    options = Options()
-    options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
-    driver = webdriver.Firefox(executable_path=r'C:\WebDrivers\geckodriver.exe', options=options)
+    driver = webdriver.Chrome()
     driver.maximize_window()  # для отображения всех позиций
     driver.get("https://qa-scooter.praktikum-services.ru/order")
     order_page = OrderPage(driver)

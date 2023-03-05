@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-from Sprint_4.pages.order_page import OrderPage
+from order_page import OrderPage
 
 
 @allure.description('Тест для браузера FireFox ')
