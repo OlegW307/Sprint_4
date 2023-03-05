@@ -6,10 +6,13 @@ from selenium.webdriver.common.by import By
 from Sprint_4.pages.order_page import OrderPage
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.options import Options
 
 @allure.description('Тест для браузера хром ')
 def test_order_input():
-    driver = webdriver.Chrome()
+    options = Options()
+    options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
+    driver = webdriver.Firefox(executable_path=r'C:\WebDrivers\geckodriver.exe', options=options)
     driver.maximize_window()  # для отображения всех позиций
     driver.get("https://qa-scooter.praktikum-services.ru/order")
     order_page = OrderPage(driver)

@@ -2,8 +2,12 @@ from selenium.webdriver.common.by import By
 
 # локаторы главной страницы
 class HomePageLocators:
+    # вопросы о важном
     ACCORDION_SECTION = (By.XPATH, "//div[contains(text(), 'Вопросы о важном')]")
     ACCORDION_BUTTONS = (By.XPATH, "//div[contains(@id, 'accordion__heading-')]")
+    # кнопки заказать
+    ORDER_TOP_BUTTON = (By.XPATH, "//button[contains(@class, 'Button_Button__ra12g') and text()='Заказать']")
+    ORDER_MIDDLE_BUTTON = (By.CLASS_NAME, "Button_Button__ra12g.Button_UltraBig__UU3Lp")
 
 # локаторы страницы оформления заказа
 class OrderPageLocators:
@@ -18,6 +22,7 @@ class OrderPageLocators:
 
     # второй экран формы
     DATE_INPUT = (By.CSS_SELECTOR, "div.react-datepicker__input-container > input")
+    BODY = (By.XPATH, '//body')
     RENTAL_PERIOD_DROPDOWN = (By.CLASS_NAME, "Dropdown-placeholder")
     RENTAL_PERIOD_OPTION = (By.XPATH, '//div[@class="Dropdown-option" and @role="option" and @aria-selected="false" and contains(text(), "четверо суток")]')
     BLACK_CHECKBOX = (By.XPATH, '//label[@for="black"]/input[@type="checkbox"]')
