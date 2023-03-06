@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from Sprint_4.locators.locators import HomePageLocators
+from locators.locators import HomePageLocators
 
 class MainPage:
     def __init__(self, driver):

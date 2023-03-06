@@ -11,12 +11,16 @@ class HomePageLocators:
 
 # локаторы страницы оформления заказа
 class OrderPageLocators:
+    COOKIES_BUTTON = (By.ID, "rcc-confirm-button")
+
     # первый экран формы
     FIRST_NAME_INPUT = (By.XPATH, ".//input[@placeholder='* Имя']")
     SECOND_NAME_INPUT = (By.XPATH, ".//input[@placeholder='* Фамилия']")
     ADDRESS_INPUT = (By.XPATH, ".//input[@placeholder='* Адрес: куда привезти заказ']")
+
     METRO_INPUT = (By.CLASS_NAME, "select-search__input")
     METRO_STATION_LIST = (By.CLASS_NAME, "select-search__option")
+
     PHONE_INPUT = (By.XPATH, ".//input[@placeholder='* Телефон: на него позвонит курьер']")
     NEXT_BUTTON = (By.CLASS_NAME, 'Button_Button__ra12g.Button_Middle__1CSJM')
 

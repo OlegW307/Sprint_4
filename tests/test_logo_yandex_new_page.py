@@ -3,7 +3,7 @@ import time
 import allure
 from selenium import webdriver
 
-from Sprint_4.pages.order_page import OrderPage
+from pages.order_page import OrderPage
 
 
 @allure.description('Тест на открытие нового окна и перехода на страницу Яндекс'

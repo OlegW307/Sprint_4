@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-from Sprint_4.pages.order_page import OrderPage
+from pages.order_page import OrderPage
 
 
 @allure.description('Тест для браузера FireFox ')
@@ -18,6 +18,7 @@ def test_order_input():
     driver.maximize_window()  # для отображения всех позиций
     driver.get("https://qa-scooter.praktikum-services.ru/order")
     order_page = OrderPage(driver)
+    order_page.remove_cookies()
     order_page.enter_name()
     order_page.enter_surname()
     order_page.enter_address()

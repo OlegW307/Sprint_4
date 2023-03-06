@@ -1,8 +1,8 @@
 import random
 
 
-from Sprint_4.generators import generate_name, generate_adress, generate_phone_number, date_to_order
-from Sprint_4.locators.locators import OrderPageLocators
+from generators import generate_name, generate_adress, generate_phone_number, date_to_order
+from locators.locators import OrderPageLocators
 
 
 class OrderPage:
@@ -11,6 +11,10 @@ class OrderPage:
 
     def open(self):
         self.driver.get("https://qa-scooter.praktikum-services.ru/order")
+
+    def remove_cookies(self):
+        cookie_button_element = self.driver.find_element(*OrderPageLocators.COOKIES_BUTTON)
+        cookie_button_element.click()
 
     def enter_name(self):
         name_input = self.driver.find_element(*OrderPageLocators.FIRST_NAME_INPUT)

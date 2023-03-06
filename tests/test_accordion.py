@@ -1,7 +1,7 @@
 import allure
 from selenium import webdriver
 
-from Sprint_4.pages.start_page import MainPage
+from pages.start_page import MainPage
 
 
 @allure.description('Тест на проверку открытия вопроса и печать ответа,'

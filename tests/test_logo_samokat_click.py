@@ -1,7 +1,7 @@
 import allure
 from selenium import webdriver
 
-from Sprint_4.pages.order_page import OrderPage
+from pages.order_page import OrderPage
 
 
 @allure.description('Тест на возврат на главную странцу Самоката по клику на логотип')
